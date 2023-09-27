@@ -28,6 +28,12 @@
     src: url(../fonts/Roboto-Bold.woff) format("woff"), url(../fonts/Roboto-Bold.woff2) format("woff2");
 }
 
+@font-face {
+    font-family: Roboto-Medium;
+    font-display: swap;
+    src: url(../fonts/Roboto-Medium.woff) format("woff"), url(../fonts/Roboto-Medium.woff2) format("woff2");
+}
+
 /* Стили для базовых элементов */
 * {
     box-sizing: border-box;
@@ -662,3 +668,112 @@ img {
     line-height: 148%;
     letter-spacing: 0.3px;
 }
+
+.automation {
+    padding-bottom: 147px;
+    max-width: 1213px
+}
+
+@media (max-width: 576px) {
+    .automation {
+        padding-bottom: 70px
+    }
+}
+
+.automation__wrap {
+    border-radius: 48px;
+    background: linear-gradient(300deg, #f5f2eb 1.26%, #f7e6cb 100.49%);
+    box-shadow: 6px 6px 29px 0 #dd8762;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 116px;
+    padding-bottom: 147px;
+    gap: 60px;
+}
+
+@media (max-width: 1400px) {
+    .automation__wrap {
+        padding: 88px
+    }
+}
+
+@media (max-width: 768px) {
+    .automation__wrap {
+        flex-direction: column-reverse
+    }
+}
+
+.automation__content {
+    flex-basis: 459px
+}
+
+@media (max-width: 768px) {
+    .automation__content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+    }
+}
+
+.automation__title {
+    padding-bottom: 15px;
+    color: #000000
+}
+
+.automation__text {
+    font-family: Roboto-Medium, serif;
+    font-size: 16px;
+    line-height: 148%;
+    letter-spacing: 0.3px;
+    color: #393939;
+    padding-bottom: 19px;
+    max-width: 395px;
+}
+
+.automation__info-box {
+    background: #FFFFFF;
+    box-shadow: 0 9px 17px 0 rgba(0, 0, 0, .09);
+    width: 299px;
+    gap: 17px;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    padding: 13px 18px 16px 16px;
+    margin-bottom: 23px;
+}
+
+.automation__icon-box {
+    width: 33px;
+    height: 33px;
+    background: #fe9563;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.automation__info {
+    display: flex;
+    flex-direction: column
+}
+
+.automation__info-title {
+    font-family: Roboto-Bold, serif;
+    font-size: 15px;
+    line-height: 153%;
+    color: #000000
+}
+
+.automation__info-text {
+    font-family: Roboto-Medium, serif;
+    font-size: 14px;
+    line-height: 153%;
+    color: #000000
+}
+
+
