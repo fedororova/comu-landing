@@ -9,7 +9,7 @@
 <header class="header">
     <div class="container header__wrap">
         <a class="header__logo" href="#">
-            <img alt="icon" src="img/icons/logo.svg"/>
+            <img alt="icon" class="header__logo-icon" src="img/icons/logo.svg"/>
             <h1 class="header__logo-title">COMU</h1>
         </a>
         <nav class="menu">
@@ -17,31 +17,69 @@
                 <div class="menu-btn__burger"></div>
             </div>
             <ul class="menu__list">
-                <li class="menu__list-link">
-                    <a class="header__nav-link" href="#">Home<img alt="icon" src="img/icons/arrow-down.svg"/></a>
+                <li class="menu__list-item">
+                    <a class="menu__link" href="#">Home<img alt="icon"
+                                                            class="menu__link-icon" src="img/icons/header__arrow-down.svg"/></a>
                 </li>
-                <li class="menu__list-link">
-                    <a class="header__nav-link" href="#">About<img alt="icon" src="img/icons/arrow-down.svg"/></a>
+                <li class="menu__list-item">
+                    <a class="menu__link" href="#">About<img alt="icon"
+                                                             class="menu__link-icon" src="img/icons/header__arrow-down.svg"/></a>
                 </li>
-                <li class="menu__list-link">
-                    <a class="header__nav-link" href="#">About<img alt="icon" src="img/icons/arrow-down.svg"/></a>
+                <li class="menu__list-item">
+                    <a class="menu__link" href="#">About<img alt="icon"
+                                                             class="menu__link-icon" src="img/icons/header__arrow-down.svg"/></a>
                 </li>
-                <li class="menu__list-link">
-                    <a class="header__nav-link" href="#">Auth Pagea<img alt="icon" src="img/icons/arrow-down.svg"/></a>
+                <li class="menu__list-item">
+                    <a class="menu__link" href="#">Auth Page<img alt="icon"
+                                                                 class="menu__link-icon" src="img/icons/header__arrow-down.svg"/></a>
                 </li>
-                <li class="menu__list-link">
-                    <a class="header__nav-link" href="#">Features<img alt="icon" src="img/icons/arrow-down.svg"/></a>
+                <li class="menu__list-item">
+                    <a class="menu__link" href="#">Features<img alt="icon"
+                                                                class="menu__link-icon" src="img/icons/header__arrow-down.svg"/></a>
                 </li>
-                <li class="menu__list-link">
-                    <a class="header__nav-link" href="#">Pricing</a>
+                <li class="menu__list-item">
+                    <a class="menu__link" href="#">Pricing</a>
                 </li>
-                <li class="menu__list-link">
+                <li class="menu__list-item">
                     <a class="header__btn" href="#">Get Started</a>
                 </li>
             </ul>
         </nav>
     </div>
 </header>
-<script src="js/index.js"></script>
+<main class="page">
+    <section class="promo">
+        <div class="promo__bg">
+            <div class="container">
+                <div class="promo__wrap">
+                    <div class="promo__content">
+                        <h2 class="promo__title">
+                            Share text, voice, photos, videos and GIFs files for free
+                        </h2>
+                        <p class="promo__text">
+                            Feugiat primis a ligula undo auctor mauris auctor laoreet and
+                            pretium augue an egestas cubilia
+                        </p>
+                        <div class="promo__links">
+                            <a class="promo__btn-link btn-link btn-link_theme_dark" href="#">Learn More</a>
+                            <a class="promo__link" href="#">
+                                <img alt="icon" src="img/icons/promo__learn-more.svg"/>
+                                <span class="promo__link-text">See COMU in Action</span>
+                            </a>
+                        </div>
+                        <div class="promo__info">
+                            <p class="promo__info-item">14 days free trial</p>
+                            <p class="promo__info-item">No credit card</p>
+                        </div>
+                    </div>
+                    <div class="promo__thumb">
+                        <img alt="icon" src="img/icons/promo__people.svg"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<script src="/js/index.js"></script>
 </body>
 </html>

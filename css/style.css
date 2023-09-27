@@ -1,16 +1,33 @@
 @font-face {
     font-family: Istok;
     font-display: swap;
-    src: url(../fonts/IstokWeb-Bold.woff) format("woff"), url(../fonts/IstokWeb-Bold.woff2) format("woff2")
+    src: url(../fonts/IstokWeb-Bold.woff) format("woff"), url(../fonts/IstokWeb-Bold.woff2) format("woff2");
 }
 
 @font-face {
     font-family: Poppins-Bold;
     font-display: swap;
-    src: url(../fonts/Poppins-Bold.woff) format("woff"), url(../fonts/Poppins-Bold.woff2) format("woff2")
+    src: url(../fonts/Poppins-Bold.woff) format("woff"), url(../fonts/Poppins-Bold.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: Poppins-Regular;
+    font-display: swap;
+    src: url(../fonts/Poppins-Regular.woff) format("woff"), url(../fonts/Poppins-Regular.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: Poppins-Medium;
+    font-display: swap;
+    src: url(../fonts/Poppins-Medium.woff) format("woff"), url(../fonts/Poppins-Medium.woff2) format("woff2");
 }
 
 /* Стили для базовых элементов */
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
 a {
     text-decoration: none;
     color: #000000;
@@ -26,16 +43,18 @@ ul {
     font-family: Poppins-Bold, serif;
 }
 
-/* Стили для блока header */
+/* Стили для блока заголовка */
 .header {
     background: #FFFBF0;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    padding-top: 33px;
+    padding-bottom: 2px;
 }
 
-/* Стили для элементов и модификаторов внутри блока header */
+/* Стили для элементов и модификаторов внутри блока заголовка */
 .header__wrap {
     display: flex;
     justify-content: space-between;
@@ -48,12 +67,12 @@ ul {
     gap: 16px;
 }
 
-.header__nav-link {
+.menu__link {
     display: flex;
     gap: 5px;
 }
 
-.header__nav-item {
+.menu__nav-item {
     font-size: 14px;
 }
 
@@ -85,20 +104,18 @@ ul {
     height: 45px;
     border-radius: 50%;
     border: none;
-    background-image: url(../img/icons/burger-btn.svg);
+    background-image: url(../img/icons/header__burger-btn.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #FE9563;
 }
-
-
 
 @media (max-width: 1024px) {
     .header__wrap {
         width: 90%;
     }
 
-    .header__nav-list {
+    .menu__list {
         display: none;
     }
 
@@ -110,17 +127,16 @@ ul {
 .menu__list {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex
+    display: flex;
 }
 
 @media (max-width: 1007px) {
-    .menu__list-link {
+    .menu__list-item {
         margin: 10px 0;
         display: block;
         padding: 0 15px;
         border-bottom: 1px solid transparent;
     }
-
 
     .menu__list {
         transform: translateY(-300%);
@@ -147,20 +163,189 @@ ul {
         height: 45px;
         border-radius: 50%;
         border: none;
-        background-image: url(../img/icons/burger-btn.svg);
+        background-image: url(../img/icons/header__burger-btn.svg);
         background-repeat: no-repeat;
         background-size: cover;
         background-color: #FE9563;
     }
 
-    .menu-btn.active{
+    .menu-btn.active {
         width: 45px;
         height: 45px;
         border-radius: 50%;
         border: none;
-        background-image: url(../img/icons/cross.svg);
+        background-image: url(../img/icons/menu-btn__cross.svg);
         background-repeat: no-repeat;
         background-size: cover;
         background-color: #FE9563;
     }
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.promo {
+    width: 100%;
+    height: 100%;
+    background: url("../img/promo__bg-gradient.png") no-repeat center;
+    background-size: cover;
+}
+
+@media (min-width: 1440px) {
+    .promo {
+        width: 1440px;
+    }
+}
+
+.promo__bg {
+    width: 1140px;
+    margin: 0 auto;
+    background: url("../img/icons/promo__bg-map.svg") no-repeat;
+    background-position-x: center;
+    padding-top: 60px;
+    padding-bottom: 198px;
+}
+
+@media (max-width: 1400px) {
+    .promo__bg {
+        width: calc(100% - 40px);
+    }
+}
+
+@media (max-width: 768px) {
+    .promo__bg {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+.promo__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 87px;
+}
+
+@media (max-width: 768px) {
+    .promo__wrap {
+        flex-direction: column-reverse;
+        gap: 30px;
+        padding-bottom: 50px;
+    }
+}
+
+.promo__title {
+    font-family: Poppins-Bold, serif;
+    font-size: 42px;
+    color: #455a64;
+    padding-bottom: 17px;
+    max-width: 414px;
+}
+
+.promo__text {
+    font-family: Poppins-Medium, serif;
+    font-size: 17px;
+    line-height: 147%;
+    color: #535359;
+    padding-bottom: 26px;
+    max-width: 449px;
+}
+
+.promo__links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.promo__btn {
+    color: #f3fcff;
+    font-size: 14px;
+    line-height: 147%;
+    background: #455a64;
+    border-radius: 6px;
+    padding: 9px 25px;
+    z-index: 130;
+}
+
+.promo__btn:hover {
+    background: #fe9563;
+    transition: background .4s ease;
+}
+
+.promo__btn-link {
+    font-family: Poppins-Bold, serif;
+}
+
+.btn-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Poppins-Bold, serif;
+    font-size: 14px;
+    line-height: 147%;
+    border-radius: 8px;
+    min-height: 40px;
+}
+
+.promo__link-text {
+    font-family: Poppins-Bold, serif;
+}
+
+.btn-link_theme_dark {
+    color: #f3fcff;
+    background: #455a64;
+    min-width: 131px;
+}
+
+.btn-link_theme_dark:hover {
+    background: #fe9563;
+    transition: background .4s ease;
+}
+
+@media (max-width: 576px) {
+    .promo__btn {
+        font-size: 12px;
+    }
+}
+
+.promo__link {
+    font-size: 14px;
+    line-height: 147%;
+    color: #455a64;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    z-index: 130;
+}
+
+@media (max-width: 576px) {
+    .promo__link {
+        font-size: 12px;
+    }
+}
+
+.promo__link:hover {
+    color: #fe9563;
+    transition: color .4s ease;
+}
+
+.promo__info {
+    font-size: 12px;
+    line-height: 147%;
+    color: #455a64;
+    display: flex;
+}
+
+.promo__info-item {
+    font-family: Poppins-Bold, serif;
+}
+
+.promo__info-item:not(:first-child)::before {
+    content: "";
+    border-left: 2px solid #fe9c69;
+    margin: 0 6px;
 }

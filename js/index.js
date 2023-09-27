@@ -1,5 +1,5 @@
 const menuBtn = document.querySelector(".menu-btn");
-const menuLinks = document.querySelectorAll(".menu__list-link");
+const menuLinks = document.querySelectorAll(".menu__list-item");
 const menuList = document.querySelector(".menu__list");
 
 menuBtn.addEventListener("click", function () {
@@ -13,3 +13,4 @@ menuLinks.forEach(function (link) {
         menuBtn.classList.remove("active");
     });
 });
+
