@@ -49,6 +49,22 @@ ul {
     font-family: Poppins-Bold, serif;
 }
 
+body {
+    background: #fffcf5;
+}
+
+@media (max-width: 1024px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
 /* Стили для блока заголовка */
 .header {
     background: #FFFBF0;
@@ -201,11 +217,20 @@ ul {
 }
 
 .promo__bg {
+    width: 1140px;
+    margin: 0 auto;
     background: url("../img/icons/promo__bg-map.svg") no-repeat;
     background-position-x: center;
     padding-top: 60px;
     padding-bottom: 198px;
 }
+
+@media (max-width: 1400px) {
+    .promo__bg {
+        width: calc(100% - 40px)
+    }
+}
+
 
 .promo__wrap {
     display: flex;
@@ -226,6 +251,7 @@ ul {
     color: #455a64;
     padding-bottom: 16px;
     max-width: 414px;
+    line-height: 126%;
 }
 
 .promo__text {
@@ -317,7 +343,7 @@ ul {
 
 .container {
     max-width: 1246px;
-    padding: 0 20px
+    padding: 0 20px;
 }
 
 @media (max-width: 576px) {
@@ -408,4 +434,49 @@ ul {
     color: #535359;
     max-width: 290px;
     text-align: center
+}
+
+.share {
+    margin-bottom: 115px
+}
+
+@media (max-width: 576px) {
+    .share {
+        margin-bottom: 50px
+    }
+}
+
+.share__wrap {
+    display: flex;
+    align-items: center;
+    gap: 96px
+}
+
+@media (max-width: 768px) {
+    .share__wrap {
+        flex-direction: column
+    }
+}
+
+.share__img {
+    max-width: 514px
+}
+
+.share__content {
+    max-width: 457px
+}
+
+.share__title {
+    color: #455A64;
+    font-size: 42px;
+    font-family: Poppins-Bold, serif;
+    padding-bottom: 16px;
+    line-height: 126%
+}
+
+.share__text {
+    font-family: Poppins-Medium, serif;
+    color: #535359;
+    font-size: 17px;
+    line-height: 148%;
 }
