@@ -1651,4 +1651,122 @@ img {
     border-left: 3px solid #fe9c69;
 }
 
+.contacts {
+    padding-bottom: 43px;
+}
+
+.contacts__wrap {
+    display: flex;
+    justify-content: center;
+    gap: 42px;
+}
+
+@media (max-width: 1024px) {
+    .contacts__wrap {
+        gap: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contacts__wrap {
+        flex-direction: column;
+    }
+}
+
+.contacts__left {
+    flex-basis: 303px;
+}
+
+@media (max-width: 1024px) {
+    .contacts__left {
+        flex-basis: 100%;
+    }
+}
+
+.contacts__logo {
+    display: flex;
+    padding-bottom: 16px;
+}
+
+.contacts__logo-title {
+    font-family: Istok, serif;
+    font-size: 27px;
+    color: #323232;
+}
+
+.contacts__text {
+    font-family: Poppins-Medium, serif;
+    font-size: 16px;
+    line-height: 153%;
+    color: #393939;
+    padding-bottom: 17px;
+    letter-spacing: 0.3px;
+}
+
+@media (max-width: 1024px) {
+    .contacts__text {
+        font-size: 14px;
+    }
+}
+
+.contacts__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.contacts__nav-wrap {
+    display: flex;
+    gap: 51px;
+}
+
+@media (max-width: 1024px) {
+    .contacts__nav-wrap {
+        gap: 45px;
+    }
+}
+
+.contacts__nav-title {
+    font-family: Poppins-Bold, serif;
+    font-size: 14px;
+    line-height: 153%;
+    color: #000000;
+    padding-bottom: 14px;
+}
+
+.contacts__link-list {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.contacts__link {
+    font-family: Poppins-Regular, serif;
+    font-size: 14px;
+    line-height: 153%;
+    color: #393939;
+    display: inline-block;
+    max-width: 104px;
+}
+
+.contacts__form {
+    max-width: 590px;
+}
+
+.contacts .form__input_size_s,
+.contacts .form__input_size_b {
+    min-height: 41px;
+    font-size: 16px;
+    border: 0.5px solid #fe9563;
+    border-right: none;
+    padding-left: 18px;
+}
+
+.contacts .form__btn_size_s,
+.contacts .form__btn_size_b {
+    font-size: 16px;
+    min-height: 41px;
+    border: #FE9563;
+}
 
