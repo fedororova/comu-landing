@@ -63,6 +63,13 @@ ul {
 
 body {
     background: #fffcf5;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
 }
 
 @media (max-width: 1024px) {
@@ -105,7 +112,7 @@ img {
 .header {
     background: #FFFBF0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin: 0 auto;
     padding-top: 33px;
@@ -250,6 +257,12 @@ img {
     height: 100%;
     background: url("../img/promo__bg-gradient.png") no-repeat center;
     background-size: cover;
+}
+
+@media (min-width: 1440px) {
+    .promo {
+        width: 1440px
+    }
 }
 
 .promo__bg {
@@ -766,7 +779,8 @@ img {
 
 .automation__info {
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .automation__info-title {
@@ -1525,41 +1539,48 @@ img {
     border-radius: 0 8px 8px 0;
     background: #fe9563;
     cursor: pointer;
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 @media (max-width: 576px) {
     .form__btn {
-        border-radius: 0 0 8px 8px;
-    }
-}
-
-.form__btn_size_s,
-.form__btn_size_b {
-    font-size: 16px;
-    min-height: 62px;
-    border: #FE9563;
-}
-
-@media (max-width: 576px) {
-    .form__btn_size_s,
-    .form__btn_size_b {
-        width: 100%;
-        flex-basis: 39px;
+        border-radius: 0 0 8px 8px
     }
 }
 
 .form__btn_size_s {
     flex-basis: 148px;
+    font-size: 14px;
+    min-height: 62px;
+    border: #FE9563;
+}
+
+@media (max-width: 576px) {
+    .form__btn_size_s {
+        width: 100%;
+        flex-basis: 39px;
+        border: #FE9563;
+    }
 }
 
 .form__btn_size_b {
     flex-basis: 210px;
+    font-size: 21px;
+    min-height: 62px;
+    border: #FE9563;
+}
+
+@media (max-width: 576px) {
+    .form__btn_size_b {
+        width: 100%;
+        flex-basis: 39px;
+        border: #FE9563;
+    }
 }
 
 .form__btn:hover {
     background: #8f8f8f;
-    transition: background 0.4s ease;
+    transition: background .4s ease
 }
 
 .unlimited {
@@ -1652,51 +1673,53 @@ img {
 }
 
 .contacts {
-    padding-bottom: 43px;
+    padding-bottom: 43px
 }
 
 .contacts__wrap {
     display: flex;
     justify-content: center;
-    gap: 42px;
+    gap: 42px
 }
 
 @media (max-width: 1024px) {
     .contacts__wrap {
-        gap: 22px;
+        gap: 22px
     }
 }
 
 @media (max-width: 768px) {
     .contacts__wrap {
-        flex-direction: column;
+        flex-direction: column
     }
 }
 
 .contacts__left {
-    flex-basis: 303px;
+    flex-basis: 303px
 }
 
 @media (max-width: 1024px) {
     .contacts__left {
-        flex-basis: 100%;
+        flex-basis: 100%
     }
 }
 
 .contacts__logo {
     display: flex;
-    padding-bottom: 16px;
+    padding-bottom: 10px;
+    align-items: baseline;
 }
 
 .contacts__logo-title {
     font-family: Istok, serif;
-    font-size: 27px;
+    font-size: 28px;
     color: #323232;
+    line-height: 100%;
 }
 
 .contacts__text {
     font-family: Poppins-Medium, serif;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 153%;
     color: #393939;
     padding-bottom: 17px;
@@ -1705,7 +1728,7 @@ img {
 
 @media (max-width: 1024px) {
     .contacts__text {
-        font-size: 14px;
+        font-size: 14px
     }
 }
 
@@ -1713,32 +1736,38 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 10px;
+    gap: 47px
 }
 
 .contacts__nav-wrap {
     display: flex;
-    gap: 51px;
+    gap: 66px
 }
 
 @media (max-width: 1024px) {
     .contacts__nav-wrap {
-        gap: 45px;
+        gap: 45px
+    }
+}
+
+@media (max-width: 768px) {
+    .contacts__nav-wrap {
+        flex-wrap: wrap
     }
 }
 
 .contacts__nav-title {
     font-family: Poppins-Bold, serif;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 153%;
     color: #000000;
-    padding-bottom: 14px;
+    padding-bottom: 15px
 }
 
 .contacts__link-list {
     display: flex;
     flex-direction: column;
-    gap: 7px;
+    gap: 7px
 }
 
 .contacts__link {
@@ -1746,44 +1775,50 @@ img {
     font-size: 14px;
     line-height: 153%;
     color: #393939;
+    position: relative;
     display: inline-block;
     max-width: 104px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.contacts__link::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    height: 1px;
+    width: 0;
+    transform: translate(-50%);
+    background: #393939;
+    transition: width .4s ease
+}
+
+.contacts__link:hover::after {
+    width: 100%;
+    transition: width .4s ease
 }
 
 .contacts__form {
-    max-width: 590px;
-}
-
-.contacts .form__input_size_s,
-.contacts .form__input_size_b {
-    min-height: 41px;
-    font-size: 16px;
-    border: 0.5px solid #fe9563;
-    border-right: none;
-    padding-left: 18px;
-}
-
-.contacts .form__btn_size_s,
-.contacts .form__btn_size_b {
-    font-size: 16px;
-    min-height: 41px;
-    border: #FE9563;
+    max-width: 590px
 }
 
 .footer {
+    margin: 0 auto;
+    background: linear-gradient(90deg, #f7e6cb 0, #f5f2ea 99.44%);
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(90deg, #f7e6cb 0, #f5f2ea 99.44%);
-    padding: 19px 0;
-    width: 100%;
-    margin: 0 auto;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    width: 100%
 }
 
-@media (min-width: 1440px) { {
-    width: 1440px ;
-}
-
+@media (min-width: 1440px) {
+    .footer {
+        width: 1440px
+    }
 }
 
 .footer__wrap {
@@ -1793,16 +1828,23 @@ img {
     gap: 102px;
 }
 
-@media (max-width: 1024px) { {
-    gap: 41px;
-}
+@media (max-width: 1024px) {
+    .footer__wrap {
+        gap: 40px
+    }
 }
 
 @media (max-width: 768px) { {
     flex-direction: column-reverse;
     gap: 20px;
 }
+}
 
+@media (max-width: 768px) {
+    .footer__wrap {
+        flex-direction: column-reverse;
+        gap: 20px
+    }
 }
 
 .footer__copyright {
@@ -1839,6 +1881,30 @@ img {
 
 .footer__links li:nth-child(3) {
     margin-right: 46px;
+}
+
+.btn-link_theme_light {
+    color: #000;
+    border: 2px solid #fe9868;
+    min-width: 149px;
+    min-height: 40px;
+}
+
+.btn-link_theme_light:hover {
+    color: #455a64;
+    background: #fe9563;
+}
+
+.btn-link_theme_bright {
+    color: #f3fcff;
+    background: #fe9868;
+    min-width: 160px
+}
+
+.btn-link_theme_bright:hover {
+    color: #455a64;
+    background: #fe9563;
+    font-family: Roboto-Bold, serif;
 }
 
 

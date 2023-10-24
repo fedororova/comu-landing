@@ -13,4 +13,3 @@ menuLinks.forEach(function (link) {
         menuBtn.classList.remove("active");
     });
 });
-
